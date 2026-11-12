@@ -231,32 +231,65 @@ export const AcademicWork: React.FC = () => {
           </div>
         </div>
 
-        {/* Coursework Companion Card */}
-        <div className="p-6 sm:p-7 rounded-3xl bg-[#F2F8FF] border border-[#DCE8F5] flex flex-col md:flex-row md:items-center justify-between gap-6 shadow-sm">
-          <div className="space-y-2">
-            <div className="flex items-center gap-2 text-xs font-mono text-[#2563EB]">
-              <span className="font-bold">COA PRACTICUM COMPANION</span>
-              <span aria-hidden="true" className="text-[#DCE8F5]">·</span>
-              <span className="text-[#526579]">Open Source Repository</span>
+        {/* Coursework Companion Card & Quick Navigation to Independent Academic Submissions */}
+        <div className="space-y-6">
+          <div className="p-6 sm:p-7 rounded-3xl bg-[#F2F8FF] border border-[#DCE8F5] flex flex-col md:flex-row md:items-center justify-between gap-6 shadow-sm">
+            <div className="space-y-2">
+              <div className="flex items-center gap-2 text-xs font-mono text-[#2563EB]">
+                <span className="font-bold">COA PRACTICUM COMPANION</span>
+                <span aria-hidden="true" className="text-[#DCE8F5]">·</span>
+                <span className="text-[#526579]">Open Source Repository</span>
+              </div>
+              <h4 className="text-lg font-bold text-[#142D4E]">
+                Instruction Set Simulator — Architecture Practicum
+              </h4>
+              <p className="text-xs sm:text-sm text-[#526579] max-w-2xl leading-relaxed">
+                Developed in tandem with the Computer Organization & Architecture course to simulate instruction decode cycles, register states, and address decoding.
+              </p>
             </div>
-            <h4 className="text-lg font-bold text-[#142D4E]">
-              Instruction Set Simulator — Architecture Practicum
-            </h4>
-            <p className="text-xs sm:text-sm text-[#526579] max-w-2xl leading-relaxed">
-              Developed in tandem with the Computer Organization & Architecture course to simulate instruction decode cycles, register states, and address decoding.
-            </p>
+
+            <a
+              href="https://github.com/garvitchaudhary9211/InstructionSetSimulator"
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center gap-2 px-5 py-2.5 text-xs sm:text-sm font-semibold text-[#142D4E] bg-white hover:bg-slate-50 border border-[#DCE8F5] rounded-xl transition-all shrink-0 shadow-sm hover:border-[#5B9BEE]"
+            >
+              <Github className="w-4 h-4 text-[#142D4E]" />
+              <span>View COA Repository</span>
+              <ArrowUpRight className="w-4 h-4 text-[#526579]" />
+            </a>
           </div>
 
-          <a
-            href="https://github.com/garvitchaudhary9211/InstructionSetSimulator"
-            target="_blank"
-            rel="noreferrer"
-            className="inline-flex items-center gap-2 px-5 py-2.5 text-xs sm:text-sm font-semibold text-[#142D4E] bg-white hover:bg-slate-50 border border-[#DCE8F5] rounded-xl transition-all shrink-0 shadow-sm hover:border-[#5B9BEE]"
-          >
-            <Github className="w-4 h-4 text-[#142D4E]" />
-            <span>View COA Repository</span>
-            <ArrowUpRight className="w-4 h-4 text-[#526579]" />
-          </a>
+          {/* Quick Category Navigation Strip to Case Study 3 and Assignment 3 */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <a
+              href="#case-study-3"
+              className="p-5 rounded-2xl bg-white border border-[#DCE8F5] hover:border-[#5B9BEE] hover:bg-[#F8FBFF] transition-all flex items-center justify-between group shadow-xs"
+            >
+              <div className="space-y-1">
+                <span className="text-[11px] font-mono font-bold text-[#2563EB] uppercase">Dedicated Category 01</span>
+                <h5 className="text-sm font-bold text-[#142D4E] group-hover:text-[#2563EB] transition-colors">
+                  Case Study 3: Cache Memory Performance
+                </h5>
+                <p className="text-xs text-[#526579]">Analysis of cache hits/misses, hit ratio, and locality</p>
+              </div>
+              <ArrowUpRight className="w-5 h-5 text-[#5B9BEE] group-hover:text-[#2563EB] transition-colors shrink-0 ml-2" />
+            </a>
+
+            <a
+              href="#assignment-3"
+              className="p-5 rounded-2xl bg-white border border-[#DCE8F5] hover:border-[#5B9BEE] hover:bg-[#F8FBFF] transition-all flex items-center justify-between group shadow-xs"
+            >
+              <div className="space-y-1">
+                <span className="text-[11px] font-mono font-bold text-[#2563EB] uppercase">Dedicated Category 02</span>
+                <h5 className="text-sm font-bold text-[#142D4E] group-hover:text-[#2563EB] transition-colors">
+                  Assignment 3: Average Memory Access Time (AMAT)
+                </h5>
+                <p className="text-xs text-[#526579]">AMAT formula calculation, CPU–Cache–RAM diagram & observations</p>
+              </div>
+              <ArrowUpRight className="w-5 h-5 text-[#5B9BEE] group-hover:text-[#2563EB] transition-colors shrink-0 ml-2" />
+            </a>
+          </div>
         </div>
       </div>
     </section>

@@ -138,6 +138,95 @@ export const ACADEMIC_DOCS: AcademicDoc[] = [
   },
 ];
 
+export interface AcademicCourseworkDoc {
+  id: string;
+  title: string;
+  category: string;
+  subject: string;
+  institution: string;
+  studentName: string;
+  uid: string;
+  className: string;
+  description: string;
+  pdfUrl: string;
+  pdfFilename: string;
+  docxUrl: string;
+  docxFilename: string;
+  topics: string[];
+  keyCalculations?: { label: string; formula: string; result: string }[];
+  performanceObservations?: string[];
+}
+
+export const CASE_STUDY_3: AcademicCourseworkDoc = {
+  id: 'case-study-3',
+  title: 'Cache Memory Performance Analysis',
+  category: 'Case Study 3',
+  subject: 'Computer Organization and Architecture (COA)',
+  institution: 'Chandigarh University',
+  studentName: 'Garvit Chaudhary',
+  uid: '25BAI10055',
+  className: '25BAI-601',
+  description:
+    'Analysis of cache memory performance, cache hits and misses, hit ratio, miss ratio, locality of reference and cache effectiveness.',
+  pdfUrl: '/documents/Garvit_Chaudhary_Case_Study_3_Cache_Memory.pdf',
+  pdfFilename: 'Garvit_Chaudhary_Case_Study_3_Cache_Memory.pdf',
+  docxUrl: '/documents/Garvit_Chaudhary_Case_Study_3_Cache_Memory.docx',
+  docxFilename: 'Garvit_Chaudhary_Case_Study_3_Cache_Memory.docx',
+  topics: [
+    'Cache Memory Structure & Multi-Level Hierarchy (L1, L2, L3)',
+    'Cache Hit vs. Cache Miss Mechanics',
+    'Hit Ratio Calculation: 850 / 1,000 = 85%',
+    'Miss Ratio Calculation: 150 / 1,000 = 15%',
+    'Temporal, Spatial & Sequential Locality of Reference',
+    'AMAT Sensitivity Analysis & Miss Penalty Impact',
+  ],
+  keyCalculations: [
+    { label: 'Total Memory Accesses', formula: 'Given Scenario', result: '1,000 accesses' },
+    { label: 'Cache Hits', formula: 'Found in cache', result: '850 hits' },
+    { label: 'Cache Misses', formula: 'Not found in cache', result: '150 misses' },
+    { label: 'Cache Hit Ratio', formula: '850 / 1,000 × 100%', result: '85%' },
+    { label: 'Cache Miss Ratio', formula: '150 / 1,000 × 100%', result: '15%' },
+    { label: 'AMAT (Average Memory Access Time)', formula: '2 ns + (0.15 × 50 ns)', result: '9.5 ns' },
+  ],
+};
+
+export const ASSIGNMENT_3: AcademicCourseworkDoc = {
+  id: 'assignment-3',
+  title: 'Average Memory Access Time (AMAT)',
+  category: 'Assignment 3',
+  subject: 'Computer Organization and Architecture (COA)',
+  institution: 'Chandigarh University',
+  studentName: 'Garvit Chaudhary',
+  uid: '25BAI10055',
+  className: '25BAI-601',
+  description:
+    'Calculation of Average Memory Access Time using cache hit time, miss rate and miss penalty, including a CPU–Cache–RAM diagram and three performance observations.',
+  pdfUrl: '/documents/Garvit_Chaudhary_AMAT_Assignment.pdf',
+  pdfFilename: 'Garvit_Chaudhary_AMAT_Assignment.pdf',
+  docxUrl: '/documents/Garvit_Chaudhary_AMAT_Assignment.docx',
+  docxFilename: 'Garvit_Chaudhary_AMAT_Assignment.docx',
+  topics: [
+    'AMAT Formulation: Hit Time + (Miss Rate × Miss Penalty)',
+    'Miss Rate Derivation: 150 / 1,000 = 15%',
+    'Calculated AMAT: 2 ns + (0.15 × 50 ns) = 9.5 ns',
+    'CPU–Cache–RAM Memory Architecture Routing Diagram',
+    '3 Core Performance Observations on Processor Delays',
+    'Hit Ratio Optimization Impact (9.5 ns → 7.0 ns)',
+  ],
+  keyCalculations: [
+    { label: 'Hit Time', formula: 'Base cache cycle', result: '2 ns' },
+    { label: 'Miss Penalty', formula: 'RAM access penalty', result: '50 ns' },
+    { label: 'Miss Rate', formula: '150 / 1,000', result: '0.15 (15%)' },
+    { label: 'Calculated AMAT', formula: '2 + (0.15 × 50)', result: '9.5 ns' },
+    { label: 'Optimized AMAT (at 90% hit)', formula: '2 + (0.10 × 50)', result: '7.0 ns' },
+  ],
+  performanceObservations: [
+    '1. Most requests are served by cache: The cache hit ratio is 85%, satisfying most memory requests directly and avoiding slow RAM bus traversal.',
+    '2. Cache misses increase access time: Although only 15% are misses, each miss adds a heavy 50 ns penalty, contributing 7.5 ns (78.9%) of total AMAT.',
+    '3. A higher hit ratio improves performance: Increasing the hit ratio to 90% drops AMAT from 9.5 ns to 7.0 ns, reducing processor stall time significantly.',
+  ],
+};
+
 export const CERTIFICATES: Certificate[] = [
   {
     title: 'Microsoft Azure Fundamentals (AZ-900)',

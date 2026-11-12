@@ -5,6 +5,8 @@ import { About } from './components/About';
 import { Skills } from './components/Skills';
 import { Projects } from './components/Projects';
 import { AcademicWork } from './components/AcademicWork';
+import { CaseStudy3Section } from './components/CaseStudy3Section';
+import { Assignment3Section } from './components/Assignment3Section';
 import { ResumeSection } from './components/ResumeSection';
 import { Certificates } from './components/Certificates';
 import { NumberSystemConverter } from './components/NumberSystemConverter';
@@ -21,6 +23,8 @@ export default function App() {
       'skills',
       'projects',
       'academic',
+      'case-study-3',
+      'assignment-3',
       'resume',
       'certificates',
       'converter',
@@ -55,6 +59,8 @@ export default function App() {
         <Skills />
         <Projects />
         <AcademicWork />
+        <CaseStudy3Section />
+        <Assignment3Section />
         <ResumeSection />
         <Certificates />
         <NumberSystemConverter />
